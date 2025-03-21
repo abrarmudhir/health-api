@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+.env
+
+# Virtualenv
+.venv/
+venv/
+
+# VSCode
+.vscode/
+
+# Mypy cache
+.mypy_cache/
+
+# Pytest
+.cache/
+
+# Alembic
+alembic/versions/*.pyc
