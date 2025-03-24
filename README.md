@@ -75,3 +75,9 @@ If you prefer containerization, build and run the application using Docker:
    ```bash
    docker run -p 8000:8000 health-api
    ```
+   
+Alternatively, using Docker Compose, execute:
+3. **Run the Docker container:**
+   ```bash
+   docker-compose up --build
+   ```
