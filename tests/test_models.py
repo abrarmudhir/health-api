@@ -4,7 +4,7 @@ import pytest
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from app.models import Base
+from app.db.base import Base
 from app.models.clinician import Clinician
 from app.models.enums import SexEnum, MedicationFormEnum, RequestStatusEnum
 from app.models.medication import Medication

@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, Date, Enum
 from sqlalchemy.orm import relationship
 
-from app.models import Base
+from app.db.base import Base
 from app.models.enums import SexEnum
 
 
