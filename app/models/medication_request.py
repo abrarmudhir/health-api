@@ -26,7 +26,6 @@ class MedicationRequest(Base):
     frequency = Column(String)
     status = Column(Enum(RequestStatusEnum), nullable=False)
 
-    # Relationships
     patient = relationship("Patient", back_populates="medication_requests")
     clinician = relationship("Clinician", back_populates="medication_requests")
     medication = relationship("Medication", back_populates="medication_requests")
