@@ -1,4 +1,9 @@
 import logging
+import os
+
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 def configure_logger(name=__name__, level=logging.INFO):
@@ -17,3 +22,9 @@ def configure_logger(name=__name__, level=logging.INFO):
 
 
 logger = configure_logger()
+
+DATABASE_URL = os.getenv(
+    "DATABASE_URL", "postgresql://healthuser:healthpass@db:5432/healthdb"
+)
+
+logger.info("DATABASE_URL loaded: %s", DATABASE_URL)
