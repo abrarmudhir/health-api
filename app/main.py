@@ -3,12 +3,14 @@ import os
 import uvicorn
 from fastapi import FastAPI
 
+from app.routes import create_medication, read_medication, update_medication_request
+
 app = FastAPI(title="Health API")
 
 
-@app.get("/")
-def root():
-    return {"message": "Health API is up"}
+app.include_router(create_medication.router)
+app.include_router(read_medication.router)
+app.include_router(update_medication_request.router)
 
 
 def main():
